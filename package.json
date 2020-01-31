@@ -1,0 +1,58 @@
+{
+    "name": "@rileyx/jptheme-virgo",
+    "version": "0.0.2",
+    "description": "Modifications of dark theme for jupyter lab",
+    "homepage": "https://github.com/riley-x/jptheme-virgo",
+    "bugs": {
+        "url": "https://github.com/riley-x/jptheme-virgo/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/riley-x/jptheme-virgo.git"
+    },
+    "license": "ISC",
+    "author": "Riley Xu",
+    "files": [
+        "lib/*.d.ts",
+        "lib/*.js.map",
+        "lib/*.js",
+        "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+    ],
+    "sideEffects": true,
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "style": "style/index.css",
+    "directories": {
+        "lib": "lib/"
+    },
+    "scripts": {
+        "build": "tsc -b",
+        "clean": "rimraf lib",
+        "prepublishOnly": "npm run build",
+        "watch": "tsc -b --watch"
+    },
+    "keywords": [
+        "virgo",
+        "dark",
+        "theme",
+        "jupyter",
+        "jupyterlab",
+        "jupyterlab-extension"
+    ],
+    "dependencies": {
+        "@jupyterlab/application": "^1.2.0",
+        "@jupyterlab/apputils": "^1.2.0"
+    },
+    "devDependencies": {
+        "rimraf": "~2.6.2",
+        "typedoc": "^0.14.2",
+        "typescript": "~3.5.1"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "jupyterlab": {
+        "extension": true,
+        "themePath": "style/index.css"
+    }
+}
